@@ -1,0 +1,14 @@
+name: DevOps-Pipeline
+on: [push]
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Download the code
+        uses: actions/checkout@v4
+        
+      - name: 2. Show me all files (Debug)
+        run: ls -la          # This prints the directory contents in the logs
+
+      - name: 3. Run the script
+        run: python test_app.py
