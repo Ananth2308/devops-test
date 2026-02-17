@@ -22,14 +22,9 @@ jobs:
 
       - name: Package and Deploy lambda1
         run: |
-          zip Palindram.zip Palindram.py
+          zip lambda_function.zip lambda_function.py
           aws lambda update-function-code \
-            --function-name Palindram \
-            --zip-file fileb://Palindram.zip
+            --function-name lambda_function \
+            --zip-file fileb://lambda_function.zip
 
-      - name: Package and Deploy lambda2
-        run: |
-          zip EvenNumber.zip EvenNumber.py
-          aws lambda update-function-code \
-            --function-name EvenNumber \
-            --zip-file fileb://EvenNumber.zip
+ 
