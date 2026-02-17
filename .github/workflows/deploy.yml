@@ -24,7 +24,7 @@ jobs:
         run: |
           zip lambda_function.zip lambda_function.py
           aws lambda update-function-code \
-            --function-name MyDevOpsLambda \
+            --function-name lambda_function \
             --zip-file fileb://lambda_function.zip
 
  
